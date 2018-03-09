@@ -1,0 +1,27 @@
+23:43:34 **** Incremental Build of configuration Nios II for project Hello ****
+make all 
+Info: Building ../Hello_bsp/
+D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Hello_bsp/
+[BSP build complete]
+[Hello build complete]
+23:53:49 **** Build of configuration Nios II for project Hello ****
+make all 
+Info: Building ../Hello_bsp/
+D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Hello_bsp/
+[BSP build complete]
+[Hello build complete]
+23:53:56 **** Incremental Build of configuration Nios II for project Hello ****
+make all 
+Info: Building ../Hello_bsp/
+D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Hello_bsp//HAL/inc -I../Hello_bsp/ -I../Hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+Info: Linking Hello.elf
+nios2-elf-g++  -T'../Hello_bsp//linker.x' -msys-crt0='../Hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Hello_bsp/  -msmallc  -Wl,-Map=Hello.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Hello.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert Hello.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_test --quartus_project_dir "C:/Users/paata/Documents/Nios_II_Projects" --jdi ../..//output_files/nios_test.jdi --sopcinfo C:/Users/paata/Documents/Nios_II_Projects/software/Hello_bsp/../../nios_test.sopcinfo
+Info: (Hello.elf) 612 Bytes program size (code + initialized data).
+Info:             3480 Bytes free for stack + heap.
+Info: Creating Hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Hello.elf >Hello.objdump
+[Hello build complete]
